@@ -19,14 +19,14 @@ brew install glew glm sdl2
 ```
 
 ### Makefile Instructions 
-# Important: Please clone the repository to your home directory.
 
 ```bash
 mkdir build
 cd build
 cp ../makefile .
 make
-./Tutorial
+cd ..
+./build/Tutorial
 ```
 
 ## Ubuntu.cse.unr.edu

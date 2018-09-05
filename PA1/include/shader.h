@@ -4,9 +4,6 @@
 #include <vector>
 #include <fstream>
 #include <string>
-#include <unistd.h>
-#include <sys/types.h>
-#include <pwd.h>
 
 #include "graphics_headers.h"
 

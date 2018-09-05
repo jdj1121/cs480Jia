@@ -1,7 +1,5 @@
 #include "shader.h"
 
-//#include "fragmentShader.glsl"
-
 Shader::Shader()
 {
   m_shaderProg = 0;
@@ -38,19 +36,13 @@ bool Shader::Initialize()
 bool Shader::AddShader(GLenum ShaderType)
 {
   std::string s;
-  struct passwd *pw = getpwuid(getuid());
-  const char *homedir = pw->pw_dir;
 
   std::ifstream vs;
-  std::string vPath(homedir);
-  vPath = vPath + "/cs480Jia/PA1/shader/vertexShader.glsl";
-  vs.open(vPath);
+  vs.open("shader/vertexShader.glsl");
   std::string v((std::istreambuf_iterator<char>(vs)), (std::istreambuf_iterator<char>()));
   vs.close();
 
-  std::string fPath(homedir);
-  fPath = fPath + "/cs480Jia/PA1/shader/fragmentShader.glsl";
-  vs.open(fPath);
+  vs.open("shader/fragmentShader.glsl");
   std::string f((std::istreambuf_iterator<char>(vs)), (std::istreambuf_iterator<char>()));
   vs.close();
 
