@@ -13,7 +13,8 @@ class Object
     void Render();
     void Reverse();
     void Pause();
-    void OrbitalReverse();
+    void OrbitalLeft();
+    void OrbitalRight();
     void OrbitalPause();
 
     glm::mat4 GetModel();

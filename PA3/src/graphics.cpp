@@ -113,8 +113,8 @@ void Graphics::Update(unsigned int dt)
 
   // Update the object
   m_cube->PlanetUpdate(dt);
-  angle -= dt * M_PI/5000;
-  m_moon->model = glm::translate( m_cube->GetPosition(), glm::vec3(5.0f * cos( angle ), 0.0f, 5.0f * sin( angle ) ) )
+  angle -= dt * M_PI/1000;
+  m_moon->model = glm::translate( m_cube->GetPosition(), glm::vec3( 4.0f * cos( angle ), 0.0f, 4.0f * sin( angle ) ) )
  * glm::scale( glm::mat4(1.0f), glm::vec3(0.27f));
 }
 
@@ -189,9 +189,14 @@ void Graphics::Pause()
   m_cube->Pause();
 }
 
-void Graphics::OrbitalReverse()
+void Graphics::OrbitalLeft()
 {
-  m_cube->OrbitalReverse();
+  m_cube->OrbitalLeft();
+}
+
+void Graphics::OrbitalRight()
+{
+  m_cube->OrbitalRight();
 }
 
 void Graphics::OrbitalPause()

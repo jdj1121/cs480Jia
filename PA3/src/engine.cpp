@@ -81,24 +81,13 @@ void Engine::Mouse()
   {
     if (SDL_GetMouseState( NULL, NULL ) & SDL_BUTTON( SDL_BUTTON_LEFT ))
     {
-      m_graphics->Reverse();
+      m_graphics->OrbitalLeft();
     }
 
     else if (SDL_GetMouseState( NULL, NULL ) & SDL_BUTTON( SDL_BUTTON_RIGHT ))
     {
-      m_graphics->Pause();
+      m_graphics->OrbitalRight();
     }
-
-    else if (SDL_GetMouseState( NULL, NULL ) & SDL_BUTTON( SDL_BUTTON_X1 ))
-    {
-      m_graphics->OrbitalReverse();
-    }
-
-    else if (SDL_GetMouseState( NULL, NULL ) & SDL_BUTTON( SDL_BUTTON_X2 ))
-    {
-      m_graphics->OrbitalPause();
-    }
-
   }
 }
 
@@ -126,12 +115,17 @@ void Engine::Keyboard()
       m_graphics->Pause();
     }
 
-    else if (m_event.key.keysym.sym == SDLK_e)
+    else if (m_event.key.keysym.sym == SDLK_LEFT)
     {
-      m_graphics->OrbitalReverse();
+      m_graphics->OrbitalLeft();
     }
 
-    else if (m_event.key.keysym.sym == SDLK_r)
+    else if (m_event.key.keysym.sym == SDLK_RIGHT)
+    {
+      m_graphics->OrbitalRight();
+    }
+
+    else if (m_event.key.keysym.sym == SDLK_UP)
     {
       m_graphics->OrbitalPause();
     }

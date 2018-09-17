@@ -132,9 +132,17 @@ void Object::Pause()
     pau = 0;
 }
 
-void Object::OrbitalReverse()
+void Object::OrbitalLeft()
 {
-  rev2 = -rev2;
+  if ( rev2 > 0)
+    rev2 = -rev2;
+}
+
+
+void Object::OrbitalRight()
+{
+  if ( rev2 < 0)
+    rev2 = -rev2;
 }
 
 void Object::OrbitalPause()

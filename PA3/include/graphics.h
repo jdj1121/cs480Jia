@@ -19,7 +19,8 @@ class Graphics
     void Render();
     void Reverse();
     void Pause();
-    void OrbitalReverse();
+    void OrbitalRight();
+    void OrbitalLeft();
     void OrbitalPause();
 
   private:
