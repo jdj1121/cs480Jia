@@ -1,13 +1,14 @@
-# PA2 - Interaction: Menus, Keyboard, and Mouse
+# PA3 - Moons
 
 # Dependencies, Building, and Running
 
 ## Instructions
 ```bash
-Q/Left Click: self rotation reverses direction
-W/Right Click: pauses self rotation
-E/XB1: orbital rotation reverses direction
-R/XB2: pauses orbital rotation
+Q: self rotation reverses direction
+W: pauses self rotation
+LEFT/Left Click: orbital rotation goes counter clockwise
+RIGHT/Right Click: orbital rotation goes clockwise
+up: pauses orbital rotation
 ```
 
 ### Ubuntu/Linux
