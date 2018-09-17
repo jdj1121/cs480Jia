@@ -104,7 +104,7 @@ bool Graphics::Initialize(int width, int height)
   //enable depth testing
   glEnable(GL_DEPTH_TEST);
   glDepthFunc(GL_LESS);
-
+  angle = 0;
   return true;
 }
 
@@ -113,7 +113,7 @@ void Graphics::Update(unsigned int dt)
 
   // Update the object
   m_cube->PlanetUpdate(dt);
-  angle -= dt * M_PI/1000;
+  angle -= dt * M_PI/1500;
   m_moon->model = glm::translate( m_cube->GetPosition(), glm::vec3( 4.0f * cos( angle ), 0.0f, 4.0f * sin( angle ) ) )
  * glm::scale( glm::mat4(1.0f), glm::vec3(0.27f));
 }

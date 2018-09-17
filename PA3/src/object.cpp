@@ -84,8 +84,8 @@ Object::~Object()
 
 void Object::PlanetUpdate(unsigned int dt)
 {
-  angle[0] += dt * M_PI/1000 * rev * pau;
-  angle[1] -= dt * M_PI/5000 * rev2 * pau2;
+  angle[0] += dt * M_PI/3000 * rev * pau;
+  angle[1] -= dt * M_PI/7000 * rev2 * pau2;
 
   model = glm::translate( glm::mat4(1.0f), glm::vec3(5.0f * cos( angle[1] ), 0.0f, 5.0f * sin( angle[1] ) ) )
           * glm::rotate( glm::mat4(1.0f), (angle[0]), glm::vec3(0.0, 1.0, 0.0));  
