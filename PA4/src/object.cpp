@@ -30,7 +30,7 @@ Object::Object()
     f 5 1 8
   */
 
-  if(loadOBJ("model/dragon.obj"))
+  if(loadOBJ("model/box.obj"))
   {
 	  // The index works at a 0th index
 	  for(unsigned int i = 0; i < Indices.size(); i++)
@@ -63,7 +63,9 @@ Object::~Object()
 
 void Object::Update(unsigned int dt)
 {
+  angle += dt * M_PI/5000;
 
+  model = glm::rotate( glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));  
 }
 
 glm::mat4 Object::GetModel()
