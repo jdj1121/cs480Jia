@@ -1,11 +1,11 @@
 # PA5: Assimp and Model Loading
 
 Group Members:  
-Dongjin Jia  
+Dongjun Jia  
 Ethan Park  
 Zachary Young 
 
-The code for this project should be taken from Ethan Park's repository. https://github.com/Asthonak/cs480Park.git
+The code for this project should be taken from THIS repository. 
 
 This project was very similar to the previous project, but involved using Assimp to load in models. As a result, a similar object loading function is used in object.cpp. It is modified to use Assimp to read information from a file and create a "scene" object from it. Information from the scene such as vertices and faces are then extracted to make the model. The current program cannot load models with sub-meshes. We added random color to each model using the <cstdlib> and <ctime> libraries. This is done when adding the vertices as the color for each vertex is set by setting each of the colors vectors to a random float value ranging from 1 to 0. Rotation of the model on the x-axis was also added so its dimensions could better represented. Command line arguments are used to read in the name of files that contain models. These files are located in the objects directory of PA5. To run the appliction enter ./PA5 <filename>. For example, to load box.obj enter: ./PA5 ../objects/box.obj 
 
